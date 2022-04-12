@@ -7,3 +7,19 @@
 body{
   -webkit-font-smoothing: antialiased;
 }
+
+html{
+  --white: #FFFFFF;
+  --light-white: #FDF1EB;
+  
+  --light-orange: #FFB354 ;
+  --orange: #EE7A3A;
+  --orange-text: #ED7839;
+  
+  --grey-dark: #4E4E4E;
+  --grey-light: #725C5C;
+  --grey-medium: #725C5C;
+  --light-background: #FDF1EB;
+
+  font-size: 62.5%;
+}
