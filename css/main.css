@@ -1,0 +1,177 @@
+/*Main -  Conteúdo principal*/
+main{
+  margin: 20px 0 0 263px;
+  width: calc(100vw - 263px);
+}
+
+.headline{
+  display: flex;
+  gap: 30px;
+}
+
+.video-content{
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  width: 786px;
+}
+
+.video-content > h3{
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.05em;
+
+  color: var(--orange-text);
+  height: 54px;
+}
+
+.video-content > div > img{
+  width: 783px;
+  height: 439px;
+  margin-left: 2px;
+}
+
+.details{
+  margin-right: 45px;
+  width: 242px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.icons{
+  display: flex;
+  gap: 5px;
+  margin: 0 0 12px 26px;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+
+  background: var(--orange-text);
+  border-radius: 4px;
+}
+
+.button > span{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.875rem;
+  color: var(--white);
+}
+
+.quote{
+  width: 98.76033%;
+  display: inline-block;
+
+  margin:0 0 5px 4px;
+
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.05em;
+  color: var(--orange-text);
+}
+
+.details-content{
+  height: 439px;
+  width: 242px;
+  border: 1px solid #ECECEC;
+  border-top: none;
+  border-radius: 3px;
+}
+
+.details-content > span{
+  display: block;
+  height: 45px;
+
+  padding: 11px 15px 9px 15px;
+  border: 1px solid #ECECEC;
+  border-radius: 3px 3px 0 0;
+  background: #FDF1EB;
+  
+  color: #4E4E4E;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.details-content > div{
+  font-family: 'Quicksand';
+  font-weight: 400;
+
+  height: 364px;
+  width: 212px;
+
+  color: #5C5C5C;
+
+  overflow-y: scroll;
+  margin: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: cla;
+}
+
+::-webkit-scrollbar {
+  width: .4rem;
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #dad7d7;
+}
+
+.details-content > div > span,
+.details-content > div > p > span{
+  font-weight: bold;
+}
+
+.details-content > div > p > span{
+  display: inline-block;
+  font-weight: bold;
+}
+
+.details-content > div > p{
+  line-height: 1.44rem;
+  letter-spacing: 0.02em;
+
+  margin-bottom: .4rem;
+}
+
+.details-content sup{
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.scientists{
+  list-style: none;
+}
+
+.scientists li{
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+
+  margin-bottom: .5rem;
+}
+
+#conteudo-principal > section > aside > div > span,
+#conteudo-principal > section > aside > div > ul > li{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.68rem;
+
+  margin-bottom: .5rem;
+}
+
+#universidades{
+  margin-top: 3rem;
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.68rem;  
+}

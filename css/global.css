@@ -24,3 +24,10 @@ html{
 
   font-size: 62.5%;
 }
+
+/*Container geral*/
+.container{
+  width: 100vw;
+  height: auto ;
+  position: relative;
+}
