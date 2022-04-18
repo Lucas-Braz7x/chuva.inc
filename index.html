@@ -9,11 +9,12 @@
   para a vaga de estágio com foco no frontend 2022" />
 
   <link rel="stylesheet" href="./css/global.css">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/teste.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/aside.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/headline.css">
+  <link rel="stylesheet" href="./css/summary.css">
+  <link rel="stylesheet" href="./css/arguments.css">
+  <link rel="stylesheet" href="./css/footer.css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,7 @@
   <title>SLACA 2019</title>
 </head>
 
-<body>
+<body onload="handleLike()">
   <div class="container">
     <!-- Cabeçalho -->
     <header>
@@ -116,8 +117,8 @@
             <div class="button"><img src="./assets/doi.svg" alt="Doi"></div>
           </div>
           <span class="quote">COMO CITAR ESSE TRABALHO?</span>
-          <div class="details-content">
-            <span>Detalhes</span>
+          <div class="details-content card">
+            <span class="card-header"><span>Detalhes</span></span>
             <div>
               <p>Tipo de Apresentação: <strong>Pôster</strong>
               </p>
@@ -146,13 +147,74 @@
           </div>
         </div>
       </section>
-      <section></section>
-      <section></section>
+
+      <!-- Resumo -->
+      <section class="summary">
+        <div class="card">
+          <div class="card-header"><span>Resumo</span></div>
+          <div class="card-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut,
+              commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed
+              magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi
+              tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non
+              lorem.
+              Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus
+              condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula
+              in
+              sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit
+              ametl accumsant<span id="dot">...</span> <span onclick="leiaMais()" id="see-more">ver mais</span>
+            </p>
+            </span>
+            <span id="read-more">
+              <p>
+                Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat.
+                Proin
+                dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris
+                sodales
+                id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam
+                finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean
+                interdum
+                quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet
+                odio.
+              </p>
+              <p>
+                Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec
+                eleifend
+                vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus
+                dui
+                eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent
+                blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non
+                odio.
+                Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci.
+                Quisque
+                sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu
+                libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.
+              </p>
+              <p>
+                Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut
+                hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus
+                dolor
+                at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam
+                at
+                malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </span>
+          </div>
+        </div>
+      </section>
+
+
     </main>
-    <footer></footer>
+    <!--****************************  -->
+
+    <footer>
+      <img src="assets/footer.svg" alt="Rodapé">
+    </footer>
   </div>
 
-  <script src="./js/inedx.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 
