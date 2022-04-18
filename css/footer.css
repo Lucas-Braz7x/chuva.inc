@@ -1,0 +1,13 @@
+footer{
+  margin-left: 234px;
+  height: 181px;
+
+  display: flex;
+  align-items: center;
+}
+
+footer > div{
+  height: 100%;
+  width: 100%;
+  background: url(../assets/footer.svg) no-repeat center;
+}
