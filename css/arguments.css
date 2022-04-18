@@ -1,0 +1,494 @@
+/*Parte de discussões */
+#arguments{
+  margin-bottom: 5rem;
+}
+
+#arguments .card-header > span{
+  display: block;
+  margin: 10px 15px;
+}
+
+.arguments-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.arguments-header > span:nth-child(1),
+.arguments-header h3{
+  margin-top: 15px;
+  color: var(--orange-text);
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Roboto';
+  line-height: 2.1rem;
+}
+
+.arguments-header div:nth-child(2){
+  margin: 27px 0 35px   0;
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.arguments-header > span:nth-child(2),
+.arguments-header h6{
+  color: #595959;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.925rem;
+  
+  margin-bottom: 14px;
+
+  width: 629px;
+
+}
+.arguments-header a{
+  color: var(--orange-text);
+  text-decoration: underline;
+  margin-bottom: 4.7rem;
+}
+
+#create-new-arguments,
+#create-arguments{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:is(#create-arguments, #create-new-arguments) div:nth-child(1),
+:is(#create-arguments, #create-new-arguments) div:nth-child(3){
+  width: 42%;
+  border: 0.5px solid #E7E7E7;
+}
+
+:is(#create-arguments, #create-new-arguments) div:nth-child(1){
+  margin-left: 15px;
+}
+:is(#create-arguments, #create-new-arguments) div:nth-child(3){
+  margin-right: 15px;
+}
+
+.create-topics{
+  width: 133px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform .3s, filter .3s;
+}
+
+.create-topics:hover{
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.create-topics span{
+  display: inline-block;
+  height: 16px;
+  color: var(--white);
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  
+}
+
+#send-element{
+  display: none;
+}
+
+#send-element > .arguments-header span:nth-child(1){
+  margin-bottom: 18px;
+}
+
+#send-element > .arguments-header span:nth-child(2){
+  margin-bottom: 29px;
+}
+
+#send-element > .arguments-header a{
+  font-family: 'Quicksand';
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  
+  color: #F48F44;
+}
+
+/* Novo argumento */
+
+#new-argument{
+  display: none;
+}
+
+.new-argument{
+  padding: 15px;
+  padding-left: 17px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Quicksand";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #5C5C5C;
+}
+
+.new-argument h3{
+  text-align: center;
+  font-family: "Quicksand";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #5C5C5C;
+}
+
+.new-argument label{
+  display: block;
+  margin-bottom: 1px;
+
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  /* identical to box height */
+
+  color: var(--orange-text);
+}
+
+#create-new-arguments div:nth-child(2){
+  width: 235px;
+}
+
+#input-subject{
+  width: 100%;
+  padding: 10px 23px 11px 23px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  outline: none;
+
+  margin-bottom: 10px;
+}
+
+.text-content{
+  margin-top: 4px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  height: 113px;
+  background: var(--white);
+}
+
+.textarea{
+  height: 82px;
+  width: 100%;
+
+  padding: 10px 23px 11px 23px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4D4D4D;
+}
+
+.text-content > div{
+  height: 31px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background:  #EAF1F2;
+  border-bottom: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+
+}
+
+.edit-text{
+  margin-left: 30px;
+  display: flex;
+  gap: 31px;
+}
+
+.edit-text img:hover{
+  cursor: pointer;
+}
+
+.button-submit{
+  width: 205px;
+  height: 31px;
+
+  color: var(--white);
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+
+  border-radius: 0px 0px 4px 0px;
+}
+
+.new-element{
+  position: relative;
+  min-height: 148px;
+  height: 100%;
+  backdrop-filter: blur(1200px);
+}
+
+#new-element{
+  position: absolute;
+  perspective: 100000000000px;
+  top: 0;
+  left: -1;
+  bottom: 0;
+  right: 0;
+  
+  background: rgba(221, 221, 221, .45);
+  
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+
+
+  width: 100%;
+  height: 148px;
+
+  padding: 35px 0;
+  z-index: 10;
+}
+
+.bg-element{
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#new-element > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  filter: blur(0px);
+}
+#new-element .check{
+  background: url(../assets/grey-check.svg) no-repeat left;
+
+  width: 31px;
+  height: 23px;
+}
+
+#new-element > div > h6{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #707070;
+
+  max-width: 414px;
+  width: 100%;
+  text-align: left;
+}
+
+#new-element > div > span{
+  display: inline-block;
+  font-family: 'Segoe UI';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  text-decoration-line: underline;
+
+  color: var(--orange-text);
+  cursor: pointer;
+
+  width: 122px;
+  text-align: left;
+}
+
+
+.divider{
+  display: none;
+  border: .05rem solid #ECECEC;
+  
+  height: .1rem;
+  width: auto;
+
+  margin-right: 15px;
+  margin-left: 16px;
+  z-index: 2;
+}
+
+/* Perguntas e respostas */
+.autor-ativo.arguments-info-more {
+  background: #F8F8F8; 
+}
+
+.autor-ativo .card-body > div > p{
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #4D4D4D;
+}
+
+.card-title{
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: var(--orange-text);
+  margin-bottom: .3rem;
+
+}
+
+.card-subtitle{
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+  margin-bottom: 1rem;
+}
+
+.card-text{
+  font-size: 1.4rem;
+  line-height: 1.75rem;
+
+  color: #4D4D4D;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+}
+
+#arguments-list{
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+
+  width: 97.35%;
+
+  gap: 1.7rem;
+}
+
+.arguments-topics{
+  padding: 17px 23px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.arguments-wrapper{
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+.arguments-footer{
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-family: 'Segoe UI';
+  font-weight: 350;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #757575;
+  text-transform: lowercase;
+}
+
+.info{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  gap: 3px;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.like{
+  width: 27px;
+  height: 19px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  background: var(--orange-text);
+}
+
+.like img{
+  width: 14px;
+  height: 14px;
+}
+
+#arguments-info-more-1,
+#arguments-info-more-2{
+  display: none;
+}
+
+#arguments-info-more-2 .arguments-topics.author-active{
+  padding: 15px 23px 28px 23px;
+}
+
+.author-active{
+  background: #F8F8F8;
+}
+
+.author-arguments{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-arguments h6{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+  color: #5C5C5C;
+}
+
+.arguments-info-more .card-body .card-text{
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  max-width: 981px;
+  width: 100%;
+}
+
+.authors{
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+
+.authors h6{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--orange-text);
+}
+
+.authors > div{
+  width: 31px;
+  height: 23px;
+  background: url(../assets/check.svg) no-repeat left;
+}

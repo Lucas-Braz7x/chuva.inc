@@ -205,12 +205,341 @@
         </div>
       </section>
 
+      <!-- Disucussões -->
+      <!-- discussões -->
+      <section id="arguments">
+        <div class="card">
+          <div class="card-header">
+            <span>Discussões</span>
+          </div>
+          <div class="card-body">
+            <div class="arguments-header" id="arguments-header">
+              <h3>Compartilhe suas ideias ou dúvidas com os autores!</h3>
+              <div>
+                <img src="assets/icone1.svg" alt="Compartilhe suas ideias">
+                <img src="assets/icone2.svg" alt="Deixe seus questionamentos ou sugestões para o autor!">
+                <img src="assets/icone3.svg" alt="">
+              </div>
+              <h6>Sabia que o maior estímulo no desenvolvimento científico
+                e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+              </h6>
+            </div>
 
+
+            <!-- Botao de criar discussões -->
+            <div id="create-arguments">
+              <div></div>
+              <div class="gradient create-topics" onclick="handleCreateTopics()">
+                <img src="assets/icon-create.svg" alt="Criar Tópicos">
+                <span>criar tópico</span>
+              </div>
+              <div></div>
+            </div>
+
+            <!-- Criando/editando discussões -->
+            <form>
+              <div id="new-argument" class="new-argument">
+                <h3>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</h3>
+                <label for="input-subject">Assunto:</label>
+                <input name="input-subject" id="input-subject" required
+                  placeholder="Defina um tópico sucinto para notificar os autores..." />
+                <label for="textarea-content">Conteúdo:</label>
+
+                <div class="text-content">
+                  <textarea type="text" class="textarea" id="textarea-content" required></textarea>
+                  <div>
+                    <div class="edit-text">
+                      <img src="assets/icon-bold.svg" alt="negrito">
+                      <img src="assets/icon-italic.svg" alt="italico">
+                    </div>
+                    <button id="button-submit" class="button-submit gradient" type="text">Enviar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="divider"></div>
+
+            <div class="card-body " id="send-element">
+              <div class="arguments-header">
+                <span>Seu tópico foi enviado com sucesso! :D</span>
+                <span>
+                  Agradecemos por sua contribuição,
+                  uma notificação será enviada ao seu email assim que seu tópico for respondido!
+                </span>
+                <a href="#">Descubra outros trabalhos</a>
+              </div>
+              <div id="create-new-arguments">
+                <div></div>
+                <div class="gradient create-topics" onclick="handleCreateTopics()">
+                  <span>criar novo tópico</span>
+                </div>
+
+                <div></div>
+              </div>
+            </div>
+
+            <!-- Discussões -->
+            <!-- Primeira pergunta -->
+            <div id="arguments-list">
+              <div class="arguments-wrapper">
+                <div class="card arguments-topics">
+                  <div class="card-body">
+                    <div>
+                      <h5 class="card-title">Assunto da pergunta aparece aqui</h5>
+                      <h6 class="card-subtitle">Carlos Henrique Santos</h6>
+                      <p class="card-text"> Comecinho da pergunta aparece aqui resente relato inscreve-se
+                        no campo da análise da dimensão e impacto de processo formativo situado impacto de
+                        processo formativo processo...
+                      </p>
+                    </div>
+                    <div class='arguments-footer'>
+                      <div onclick="handleMoreInfo('arguments-info-more-1')" class="info">
+                        <div class="info-more"></div>
+                        <div class="info-more"></div>
+                        <div class="info-more"></div>
+                      </div>
+                      <div class="button like">
+                        <img src="assets/like.svg" alt="Curtir">
+                      </div>
+                      <p id="count-like1">1 Like</p>
+                      <p> 1 resposta</p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="arguments-info-more-1">
+                  <div class="card arguments-topics arguments-info-more author-active">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Adriano da Silva</h6>
+                          <div class="authors">
+                            <h6>Autor</h6>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p class="card-text"> Resposta do autor é aqui. Relato inscreve-se no campo da análise da
+                          dimensão
+                          e impacto de processo formativo situado impacto de processo formativo processo resente relato
+                          inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto
+                          de processo formativo processo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card arguments-topics arguments-info-more">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Carlos Henrique Santos</h6>
+
+                        </div>
+                        <div class="card-text">
+                          <p>
+                            Consegui entender melhor agora! Parece que a variação da análise da dimensão e
+                            impacto de processo formativo situado impacto de processo formativo.
+                          </p>
+
+                          <p>
+                            Obrigada pela resposta, muito interessante o seu trabalho!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card arguments-topics arguments-info-more author-active">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Carmila Ferreira Andrade</h6>
+                          <div class="authors">
+                            <h6>Coautor</h6>
+                            <div></div>
+                          </div>
+                        </div>
+                        <div class="card-text">
+                          <p>
+                            Também ínteressante lembrar que o relato inscreve-se no campo da análise
+                            da
+                            dimensão e impacto de processo formativo situado impacto de processo formativo processo
+                            resente
+                            relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado
+                            impacto
+                            de processo formativo processo.
+                          </p>
+
+                          <p>
+                            Situado impacto de processo formativo processo resente relato inscreve-se no campo da
+                            análise
+                            da
+                            dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card arguments-topics arguments-info-more author-active">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Ana Carolina</h6>
+                          <div class="authors">
+                            <h6>Coautor</h6>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p class="card-text"> Resposta do autor é aqui. Relato inscreve-se no campo da análise da
+                          dimensão
+                          e impacto de processo formativo situado impacto de processo formativo processo resente relato
+                          inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto
+                          de processo formativo processo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fim da primeira pergunta -->
+
+              <!-- Segunda pergunta -->
+              <div class="arguments-wrapper">
+                <div class="card arguments-topics">
+                  <div class="card-body">
+                    <div>
+                      <h5 class="card-title">Assunto da pergunta aparece aqui</h5>
+                      <h6 class="card-subtitle">Carlos Henrique Santos</h6>
+                      <p class="card-text"> Comecinho da pergunta aparece aqui resente relato inscreve-se
+                        no campo da análise da dimensão e impacto de processo formativo situado impacto de
+                        processo formativo processo...
+                      </p>
+                    </div>
+                    <div class='arguments-footer'>
+                      <div onclick="handleMoreInfo('arguments-info-more-2')" class="info">
+                        <div class="info-more"></div>
+                        <div class="info-more"></div>
+                        <div class="info-more"></div>
+                      </div>
+                      <div class="button like">
+                        <img src="assets/like.svg" alt="Curtir">
+                      </div>
+                      <p id="count-like2">4 Likes</p>
+                      <p>4 respostas</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Respostas -->
+                <div id="arguments-info-more-2">
+                  <div class="card arguments-topics arguments-info-more author-active">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Adriano da Silva</h6>
+                          <div class="authors">
+                            <h6>Autor</h6>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p class="card-text"> Resposta do autor é aqui. Relato inscreve-se no campo da análise da
+                          dimensão
+                          e impacto de processo formativo situado impacto de processo formativo processo resente relato
+                          inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto
+                          de processo formativo processo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card arguments-topics arguments-info-more">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Carlos Henrique Santos</h6>
+
+                        </div>
+                        <div class="card-text">
+                          <p>
+                            Consegui entender melhor agora! Parece que a variação da análise da dimensão e
+                            impacto de processo formativo situado impacto de processo formativo.
+                          </p>
+
+                          <p>
+                            Obrigada pela resposta, muito interessante o seu trabalho!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card arguments-topics arguments-info-more author-active">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Carmila Ferreira Andrade</h6>
+                          <div class="authors">
+                            <h6>Coautor</h6>
+                            <div></div>
+                          </div>
+                        </div>
+                        <div class="card-text">
+                          <p>
+                            Também ínteressante lembrar que o relato inscreve-se no campo da análise
+                            da
+                            dimensão e impacto de processo formativo situado impacto de processo formativo processo
+                            resente
+                            relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado
+                            impacto
+                            de processo formativo processo.
+                          </p>
+
+                          <p>
+                            Situado impacto de processo formativo processo resente relato inscreve-se no campo da
+                            análise
+                            da
+                            dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card arguments-topics arguments-info-more author-active">
+                    <div class="card-body">
+                      <div>
+                        <div class="card-subtitle author-arguments">
+                          <h6>Ana Carolina</h6>
+                          <div class="authors">
+                            <h6>Coautor</h6>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p class="card-text"> Resposta do autor é aqui. Relato inscreve-se no campo da análise da
+                          dimensão
+                          e impacto de processo formativo situado impacto de processo formativo processo resente relato
+                          inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto
+                          de processo formativo processo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fim das respostas -->
+            </div>
+
+          </div>
+        </div>
+      </section>
     </main>
     <!--****************************  -->
 
     <footer>
-      <img src="assets/footer.svg" alt="Rodapé">
+      <div></div>
     </footer>
   </div>
 

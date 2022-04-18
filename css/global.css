@@ -25,9 +25,68 @@ html{
   font-size: 62.5%;
 }
 
+textarea,
+button{
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  transition: filter .3s;
+}
+
+button:hover{
+  filter: brightness(1.05);
+}
+
+
 /*Container geral*/
 .container{
   width: 100vw;
   height: auto ;
   position: relative;
+}
+
+/*Main -  Conteúdo principal*/
+main{
+  margin: 20px 0px 0 263px;
+  width: calc(100vw - 308px);
+}
+
+.gradient{
+  background:  linear-gradient(180deg, var(--light-orange) 0%,var(--orange) 100%);
+}
+
+
+.card{
+  border: 1px solid #ECECEC;
+  border-top: none;
+  border-radius: 3px;
+}
+
+.card-header{
+  border: 1px solid #ECECEC;
+  border-right: none;
+  border-radius: 3px 3px 0 0;
+  
+  background: #FDF1EB !important;
+  height: 45px;
+  
+  color: #4E4E4E !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500;
+  line-height: 2.5rem !important;
+  font-size: 2rem !important;
+}
+
+.card-header > span{
+  display: block;
+  height: 25px;
+}
+
+.info-more{
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: var(--orange-text);
 }
