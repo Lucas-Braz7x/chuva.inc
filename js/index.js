@@ -71,3 +71,32 @@ document.getElementById("button-submit").addEventListener(
   'click', handleNewArgument, false
 );
 
+
+/* Função expandir mais informações das discussões */
+const handleMoreInfo = (id) => {
+  const info = document.getElementById(id);
+  if (info.style.display === 'none') {
+    info.style.display = 'block';
+  } else {
+    info.style.display = 'none';
+  }
+}
+
+const handleLike = () => {
+  const likes = document.querySelectorAll('.like');
+  const countLikes = document.getElementById(`count-like1`);
+  const countLikes2 = document.getElementById(`count-like2`);
+
+  likes.forEach(like => like.addEventListener("click", () => {
+    if (likes[0] == like) {
+      const isLike = localStorage.getItem(`like1`);
+      countLikes.textContent = `${isLike > 0 ? 1 : 2} like`;
+      localStorage.setItem(`like1`, isLike > 0 ? 0 : 1);
+    } else {
+      const isLike = localStorage.getItem(`like2`);
+      countLikes2.textContent = `${isLike > 0 ? 4 : 5} likes`;
+      localStorage.setItem(`like2`, isLike > 0 ? 0 : 1);
+    }
+  })
+  )
+}
