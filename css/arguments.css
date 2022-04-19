@@ -44,9 +44,17 @@
   
   margin-bottom: 14px;
 
-  width: 629px;
-
+  max-width: 629px;
+  width: 100%;
 }
+
+.arguments-header > span:nth-child(2){
+  max-width: 806px;
+  width: 100%;
+}
+
+
+
 .arguments-header a{
   color: var(--orange-text);
   text-decoration: underline;
@@ -58,23 +66,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 :is(#create-arguments, #create-new-arguments) div:nth-child(1),
 :is(#create-arguments, #create-new-arguments) div:nth-child(3){
-  width: 42%;
+  position: absolute;
+  width: 39.5%;
   border: 0.5px solid #E7E7E7;
+  z-index: 1;
+  
 }
 
 :is(#create-arguments, #create-new-arguments) div:nth-child(1){
-  margin-left: 15px;
+  left: 15px;
 }
 :is(#create-arguments, #create-new-arguments) div:nth-child(3){
-  margin-right: 15px;
+  right: 15px;
 }
 
 .create-topics{
-  width: 133px;
   height: 32px;
   border-radius: 4px;
   display: flex;
@@ -83,6 +94,7 @@
   gap: 6px;
   cursor: pointer;
   transition: transform .3s, filter .3s;
+  z-index: 2;
 }
 
 .create-topics:hover{
@@ -100,6 +112,11 @@
   line-height: 1.6rem;
   
 }
+
+#create-arguments .create-topics{
+  width: 133px;
+}
+
 
 #send-element{
   display: none;
@@ -374,11 +391,11 @@
 }
 
 #arguments-list{
-  margin: 15px;
+  
+  padding: 15px;
   display: flex;
   flex-direction: column;
-
-  width: 97.35%;
+  width: 100%;
 
   gap: 1.7rem;
 }
@@ -491,4 +508,62 @@
   width: 31px;
   height: 23px;
   background: url(../assets/check.svg) no-repeat left;
+}
+
+@-webkit-keyframes showInfo {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showInfo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hiddenInfo {
+  0% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hiddenInfo {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1366px) {
+  #arguments-list{
+    width: 1058px;
+  } 
+}
+
+@media (max-width: 1365px) {
+  #arguments-list{
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 420px) {
+  #arguments-list{
+    width: 100%;
+  }
+  
 }

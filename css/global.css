@@ -90,3 +90,27 @@ main{
   border-radius: 50%;
   background: var(--orange-text);
 }
+
+.modal{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, .35);
+  display: none;
+  z-index: 100;
+}
+
+@media (max-width: 670px) {
+  main{
+    margin-left: 0px;
+    padding: 0 29px 0 36px;    
+    width: 100vw;
+  }
+}
+
+@media (max-width: 450px) {
+  main{
+    padding: 0 15px 0 15px;    
+  }
+}
