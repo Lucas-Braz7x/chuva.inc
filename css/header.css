@@ -90,12 +90,13 @@ nav{
   line-height: 1.8rem;
   margin-left: -3px;
   cursor: pointer;
+  z-index: 2;
 }
 
 #dropdown > img:nth-child(2){
   width: 6px;
   height: 4px;
-  margin-right: 13px;
+  margin-right: 10px;
   margin-left: 5px;
 }
 
