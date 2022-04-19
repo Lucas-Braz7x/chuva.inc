@@ -213,6 +213,12 @@ nav{
   cursor: pointer;
 }
 
+@media(min-width: 1367px) {
+  nav{
+    justify-content: space-between;
+  }
+}
+
 @media(max-width: 1340px) {
   .header-titles{
     white-space: normal;
