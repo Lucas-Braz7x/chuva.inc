@@ -26,8 +26,10 @@
   <title>SLACA 2019</title>
 </head>
 
-<body onload="handleLike()">
+<body onload="handleLike()" onresize="handleResize()">
   <div class="container">
+    <div class="modal" onclick="handleCloseModal()"></div>
+
     <!-- Cabeçalho -->
     <header>
       <nav>
@@ -37,9 +39,21 @@
           <span>ISSN: 1234-5678</span>
         </div>
         <div class="profile">
-          <select name="escolhe" id="dropdown">
-            <option value="sada"></option>
-          </select>
+          <div class="menu-hamburguer" onclick="handleShowAsideMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div id="dropdown">
+            <select name="escolhe">
+              <option value="PT,BR"> PT, BR</option>
+              <option value="EN,US"> EN, US</option>
+              <option value="FR,FR"> FR, FR</option>
+            </select>
+            <img src="./assets/dropdown.svg" alt="">
+            <img src="./assets/language.svg" alt="Selecionar a lingua desejada">
+          </div>
+
 
           <div class="profile-info">
             <div id="contact">
@@ -65,27 +79,27 @@
 
         <div>
           <ul class="menu">
-            <li>
+            <li class="menu-option">
               <span class="hidden"></span>
               Apresentação
             </li>
-            <li>
+            <li class="menu-option">
               <span class="hidden"></span>
               Comitês
             </li>
-            <li>
+            <li class="menu-option">
               <span class="hidden"></span>
               Autores
             </li>
-            <li>
+            <li class="menu-option">
               <span class="hidden"></span>
               Eixos temáticos
             </li>
-            <li class="active">
+            <li class="menu-option active">
               <span class="activated"></span>
               Trabalhos
             </li>
-            <li>
+            <li class="menu-option">
               <span class="hidden"></span>
               Contato
             </li>
@@ -212,7 +226,7 @@
           <div class="card-header">
             <span>Discussões</span>
           </div>
-          <div class="card-body">
+          <div class="card-body lucas">
             <div class="arguments-header" id="arguments-header">
               <h3>Compartilhe suas ideias ou dúvidas com os autores!</h3>
               <div>
@@ -252,7 +266,7 @@
                       <img src="assets/icon-bold.svg" alt="negrito">
                       <img src="assets/icon-italic.svg" alt="italico">
                     </div>
-                    <button id="button-submit" class="button-submit gradient" type="text">Enviar</button>
+                    <button id="button-submit" class="button-submit gradient" type="submit">Enviar</button>
                   </div>
                 </div>
               </div>
@@ -270,7 +284,7 @@
               </div>
               <div id="create-new-arguments">
                 <div></div>
-                <div class="gradient create-topics" onclick="handleCreateTopics()">
+                <div class="gradient create-topics" onclick="handleCreateTopics('send-element')">
                   <span>criar novo tópico</span>
                 </div>
 
