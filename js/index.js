@@ -6,6 +6,8 @@ const readMore = () => {
 
   dot.style.display = "none";
 
+  seeMore.style.animation = 'hiddenInfo .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
+  readMore.style.animation = 'showInfo .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
   if (seeMore.style.display === "none") {
     seeMore.style.display = "inline";
     readMore.style.display = "none";
@@ -17,7 +19,7 @@ const readMore = () => {
 }
 
 /* Função criar tópicos */
-const handleCreateTopics = () => {
+const handleCreateTopics = (id) => {
   const argumentsHeader = document.getElementById('arguments-header');
   const createArgument = document.getElementById('create-arguments');
   const newArgument = document.getElementById('new-argument');
@@ -25,7 +27,12 @@ const handleCreateTopics = () => {
   divider.style.display = 'block';
   argumentsHeader.style.display = 'none';
   createArgument.style.display = 'none';
-  newArgument.style.display = 'block'
+  newArgument.style.display = 'block';
+
+  if (id) {
+    const sendElement = document.getElementById('send-element');
+    sendElement.style.display = "none";
+  }
 }
 
 /* Criando nova discussão */
@@ -38,9 +45,6 @@ const handleNewArgument = (event) => {
 
   const input = document.getElementById('input-subject').value;
   const textarea = document.getElementById('textarea-content').value;
-
-  console.log(input);
-  console.log(textarea);
 
   const conteudo = document.createElement('div');
 
@@ -71,13 +75,15 @@ document.getElementById("button-submit").addEventListener(
   'click', handleNewArgument, false
 );
 
-
 /* Função expandir mais informações das discussões */
 const handleMoreInfo = (id) => {
   const info = document.getElementById(id);
   if (info.style.display === 'none') {
+    info.style.animation = 'showInfo 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
     info.style.display = 'block';
   } else {
+    info.style.animation = 'hiddenInfo 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
+    info.style.animation = ' ';
     info.style.display = 'none';
   }
 }
@@ -100,3 +106,59 @@ const handleLike = () => {
   })
   )
 }
+
+const handleShowAsideMenu = () => {
+  const asideMenu = document.querySelector('aside');
+  const headerMenu = document.querySelector('header');
+  const modal = document.querySelector('.modal');
+
+  asideMenu.style.zIndex = 1000;
+  headerMenu.style.zIndex = 1;
+  asideMenu.style.animation = 'slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
+  asideMenu.style.display = "block";
+  modal.style.display = "block";
+}
+
+const handleCloseModal = () => {
+  const asideMenu = document.querySelector('aside');
+  const modal = document.querySelector('.modal');
+
+  if (window.screen.width <= 670) {
+    asideMenu.style.display = "none";
+    modal.style.display = "none";
+
+  } else {
+    modal.style.display = "none";
+  }
+}
+
+const handleSelectOption = (event) => {
+  if (event.target.classList.length < 2) {
+    event.target.classList.add("active");
+    event.target.children[0].classList.remove("hidden");
+    event.target.children[0].classList.add("activated");
+  }
+
+  document.querySelectorAll(".active").forEach(option => {
+    if (option != event.target) {
+      option.classList.remove("active");
+      option.children[0].classList.remove("activated");
+      option.children[0].classList.add("hidden");
+    }
+  })
+}
+
+const handleResize = () => {
+  const asideMenu = document.querySelector('aside');
+
+  if (window.screen.width > 670) {
+    asideMenu.style.display = "block";
+  }
+
+  if (window.screen.width <= 670) {
+    asideMenu.style.display = "none"
+  }
+
+}
+
+document.querySelectorAll(".menu-option").forEach(option => option.addEventListener("click", handleSelectOption))
